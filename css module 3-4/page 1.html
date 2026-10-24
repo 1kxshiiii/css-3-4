@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Web Project</title>
+    <style>
+        /* --- 3. SKIP TO MAIN CONTENT LINK --- */
+        .skip-link {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip-link:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* --- 4 & 7. STYLING NAVIGATION & FLEXBOX --- */
+        nav {
+            display: flex;             /* Flex Property */
+            justify-content: space-around;
+            background-color: #333;    /* Property 1 */
+            padding: 15px;             /* Property 2 */
+            border-radius: 8px;        /* Property 3 */
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        /* --- 8. HOVER EFFECT & TRANSITION --- */
+        nav a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        /* --- 5. IMAGE BOX MODEL STYLING --- */
+        img {
+            border: 5px solid #333;    /* Box Model: Border */
+            padding: 10px;             /* Box Model: Padding */
+            border-radius: 12px;       /* Box Model: Border-radius */
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* --- 6. GRID PROPERTY --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two Columns */
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Welcome to My Website</h1>
+        <div class="grid-container">
+            <div>
+                <h2>Exploration & Discovery</h2>
+                <p>This layout uses CSS Grid to divide the primary welcome content into two accessible columns. Make sure to press "Tab" right after loading the page to test the "Skip to Main Content" link functionality!</p>
+            </div>
+            <div>
+                <img src="https://unsplash.com" alt="Beautiful landscape valley view">
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

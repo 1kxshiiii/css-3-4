@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Web Project</title>
+    <style>
+        .skip-link {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip-link:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        img {
+            border: 6px double #666;
+            padding: 12px;
+            border-radius: 20px;
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>About This Project</h1>
+        <p>This project is built following semantic accessibility criteria and modern layout workflows. All requirements have been cleanly isolated across the files.</p>
+        <img src="https://unsplash.com" alt="Abstract blue and digital planetary graphic">
+    </main>
+
+</body>
+</html>
